@@ -1,0 +1,249 @@
+/*Обнуление всех стилей*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/*Шрифт всего документа*/
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html {
+	height: 100%;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* lato-regular - latin */
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''),
+		 url('../fonts/lato-v23-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		 url('../fonts/lato-v23-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* lato-700 - latin */
+  @font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 700;
+	src: local(''),
+		 url('../fonts/lato-v23-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		 url('../fonts/lato-v23-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* lato-900 - latin */
+  @font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 900;
+	src: local(''),
+		 url('../fonts/lato-v23-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		 url('../fonts/lato-v23-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+
+  /*Стили основные для всего документа*/
+
+  html{
+	box-sizing: border-box;
+  }
+  *, *::before, *::after{
+	box-sizing: inherit;
+  }
+  .wrapper{
+	max-width: 1060px;
+	margin: 0 auto;
+  }
+  body{
+	font-family: "Lato";
+	font-style: normal;
+	font-size: 16px;
+	line-height: 1.2;
+	font-weight: normal;
+	color:black ;
+  }
+
+/*Стиль для шапки*/
+
+.header_wrapper{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	justify-content: space-between;
+	padding-top: 56px;
+
+  }
+  .header_list{
+	display: flex;
+	flex-wrap: wrap;
+  }
+  .header_item{
+	margin-right: 30px;
+	
+  }
+  .header_item:last-child{
+	margin-right: 0;
+  }
+  .header_link{
+	font-size: 18px;
+	line-height: 24px;
+	color: #a79b9b;
+	text-decoration: none;
+  }
+  .header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+  }
+  .header_link:hover, .header_link:focus, .header_link:active{
+opacity: 75%;
+  }
+  /*Конец стиля для шапки*/
+
+
+/*страница и использование для нее грида*/
+
+.animal_conteiner{
+	padding-bottom: 200px;
+	padding-top: 300px;
+	display: grid;
+	grid-template-columns: repeat(3, 300px);
+	grid-template-rows: repeat(6, 300px);
+	justify-content: center;
+	grid-template-areas: 
+	"photo1 photo1 photo2"
+	"photo3 text1 text1"
+	"photo3 text1 text1"
+	"text2 text2 photo5"
+	"photo4 photo4 photo5"
+	"text3 photo6 text4";
+}
+
+.animal_photo1{grid-area: photo1;}
+.animal_photo2{grid-area: photo2;}
+.animal_photo3{grid-area: photo3;}
+.animal_text1{grid-area: text1;}
+.animal_text2{grid-area: text2;}
+.animal_photo4{grid-area: photo4;}
+.animal_photo5{grid-area: photo5;}
+.animal_text3{grid-area: text3;}
+.animal_photo6{grid-area: photo6;}
+.animal_text4{grid-area: text4;}
+
+
+.animal_photo1 img,.animal_photo2 img,.animal_photo3 img,.animal_photo4 img,.animal_photo5 img,.animal_photo6 img{
+	
+	height: 300px;
+	width: 300px;
+}
+.animal_photo1 img{
+	width: 600px;
+}
+.animal_photo2 img{
+	width:400;
+}
+.animal_photo3 img{
+	height: 600px;
+	width: 400px;
+}
+
+.animal_photo5 img{
+	height: 600px;
+}
+.animal_photo4 img{
+width: 600px;
+}
+.animal_photo6 img{
+	height: 400px;
+}
+
+.animal_text1,.animal_text2,.animal_text3,.animal_text4{
+	text-align: center;
+	background-color: #a79b9b;
+	color: white;
+	font-size: 23px;
+	
+}
+.animal_text1 p{
+	padding-top: 100px;
+	padding-left: 30px;
+	padding-right: 20px;
+}
+.animal_text2 p{
+	font-size: 19px;
+	padding-top: 25px;
+
+}
+.animal_text3{
+	font-size: 16px;
+	height: 400px;
+	padding-top: 50px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.animal_text4{
+	font-size: 15px;
+	height: 400px;
+	padding-top: 50px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+/*Подвал*/
+#footer{
+	padding-top: 200px;
+	text-align: center;
+	padding: 60px;
+	color: black;
+	width: 100%;
+}
+.contact_right_img{
+	height: 890px;
+	
+}
+a i{
+	color: #727070;
+	font-size: 70px;
+	margin-top: 90px;
+	margin-left: 10px;
+}
+a:hover i{
+	color: white;
+	transition: 1s;
+	transform: scale(1);
+}
+
+/*Подвал конец*/

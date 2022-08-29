@@ -1,0 +1,740 @@
+/*Обнуление всех стилей*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+
+/*Шрифт всего документа*/
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html {
+	height: 100%;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* lato-regular - latin */
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''),
+		 url('../fonts/lato-v23-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		 url('../fonts/lato-v23-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* lato-700 - latin */
+  @font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 700;
+	src: local(''),
+		 url('../fonts/lato-v23-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		 url('../fonts/lato-v23-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* lato-900 - latin */
+  @font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 900;
+	src: local(''),
+		 url('../fonts/lato-v23-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		 url('../fonts/lato-v23-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+
+  /*Стили основные для всего документа*/
+
+  html{
+	box-sizing: border-box;
+  }
+  *, *::before, *::after{
+	box-sizing: inherit;
+  }
+  .wrapper{
+	max-width: 1060px;
+	margin: 0 auto;
+  }
+  body{
+	font-family: "Lato";
+	font-style: normal;
+	font-size: 16px;
+	line-height: 1.2;
+	font-weight: normal;
+	color:#ffff ;
+  }
+
+
+  /*Стиль для шапки*/
+
+  .header_wrapper{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	justify-content: space-between;
+	padding-top: 56px;
+  }
+  .header_list{
+	display: flex;
+	flex-wrap: wrap;
+  }
+  .header_item{
+	margin-right: 30px;
+	
+  }
+  .header_item:last-child{
+	margin-right: 0;
+  }
+  .header_link{
+	font-size: 18px;
+	line-height: 24px;
+	color: #a79b9b;
+	text-decoration: none;
+  }
+  .header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+  }
+  .header_link:hover, .header_link:focus, .header_link:active{
+opacity: 75%;
+  }
+  /*Конец стиля для шапки*/
+
+
+  /*Стиль для 1 страницы*/
+
+  .intro{
+	height: 100vh;
+	padding-top: 200px;
+
+  }
+  .rectangle{
+	width: 500px;
+	height: 550px;
+	background-color: #a79b9b;
+	position: relative;
+	left: 559px;
+  }
+  .intro_pic{
+	width: 500px;
+	height: 400px;
+	position: absolute;
+	left: 320px;
+	top: 300px;
+  }
+  .intro_title{
+	color: white;
+	font-size: 15px;
+	padding-top: 60px;
+	margin-bottom: 35px;
+	text-align: center;
+  }
+  .intro_title2{
+	font-size: 40px;
+	margin-bottom: 37px;
+	text-align: center;
+  }
+  .intro_title3{
+	font-size: 25px;
+	margin-bottom: 48px;
+	text-align: center;
+  }
+  .intro_title4{
+	font-size: 25px;
+	margin-bottom: 50px;
+	text-align: center;
+  }
+  .intro_button{
+	position: absolute;
+	left: 168px;
+	text-align: center;
+	font-size: 15px;
+	padding: 5px 45px;
+	border: 0;
+	background-color: #c08665;
+	color:white;
+	border-radius: 16px;
+	cursor: pointer;
+  }
+  .intro_button:hover{
+	background: white;
+	color: #a79b9b;
+  }
+  /*Конец стиля для 1 страницы*/
+
+   /*Начало стиля для 2 страницы*/
+   .animal_wrap{
+	max-width: 1000px;
+	margin: 0 auto;
+	position: relative;
+   }
+   
+   .animal_pic{
+	width: 550px;
+	height: 600px;
+	position: absolute;
+	top: 40px;
+   }
+   .animal_text{
+	font-size: 40px;
+	margin-bottom: 37px;
+	padding: 200px 5px 45px 570px;
+	text-align: center;
+	color: #a79b9b;
+   }
+   .animal_text2{
+	color: #a79b9b;
+	font-size: 25px;
+	padding: 0px 5px 95px 570px;
+	text-align: center;
+   }
+  
+   .animal_button{
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-left: 680px;
+	text-align: center;
+	font-size: 15px;
+	border: 0;
+	background-color: #c08665;
+	color:white;
+	border-radius: 16px;
+	cursor: pointer;
+   }
+   .animal_button:hover{
+	background: white;
+	color: #a79b9b;
+   }
+
+   /*Конец стиля для 2 страницы*/
+  
+
+   /*Начало стиля для 3 страницы*/
+.territory_wrap{
+	max-width: 1060px;
+	margin: 0 auto;
+	
+}
+.territory_title{
+	font-size: 40px;
+	text-align: center;
+	color: #a79b9b;
+	padding-top: 200px;
+	padding-left: 20px;
+	padding-right: 500px;
+}
+.territory_title_after{
+	font-size: 25px;
+	text-align: center;
+	color: #a79b9b;
+	padding-top: 90px;
+	padding-left: 20px;
+	padding-right: 500px;
+	padding-bottom: 90px;
+	
+	
+}
+.territory_button{
+	text-align: center;
+	font-size: 15px;
+	border: 0;
+	background-color: #c08665;
+	color:white;
+	border-radius: 16px;
+	cursor: pointer;
+	padding: 5px 45px;
+	margin-left: 200px;
+}
+.territory_button:hover{
+	background: white;
+	color: #a79b9b;
+}
+.territory_min{
+	height: 400px;
+	width: 400px;
+	border-radius: 50%;
+	position: absolute;
+	left: 780px;
+	top: 1540px;
+}
+
+   /*Конец стиля для 3 страницы*/
+
+     /*начало стиля для 4 страницы*/
+	.service_cards{
+		padding-top: 100px;
+		display:flex;
+		justify-content: center;
+		justify-content: space-between;
+		
+	}
+	.service_title{
+		color: #a79b9b;
+		font-size: 40px;
+		text-align: center;
+		padding-top: 100px;
+	}
+	
+	.service_rect{
+		height: 830px;
+		width: 400px;
+		background-color:#a79b9b;
+	}
+	.service_text_rect{
+		font-size: 30px;
+		text-align: center;
+		padding-top: 50px;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.service_pic_rect{
+		height: 500px;
+		width: 400px;
+	}
+	.service_pic_rect1{
+		
+		height: 340px;
+		width: 400px;
+	}
+	.service_pic_rect2{
+		height: 340px;
+		width: 400px;
+	}
+
+	.service_button{
+		text-align: center;
+		font-size: 15px;
+		border: 0;
+		background-color: #c08665;
+		color:white;
+		border-radius: 16px;
+		cursor: pointer;
+		padding: 5px 45px;
+		
+	}
+	.SBD{
+		padding-left: 100px;
+		padding-top: 60px;
+	}
+	.SBD2{
+		padding-left: 100px;
+		padding-top: 80px;
+	}
+	.SBD1{
+		padding-left: 130px;
+		padding-top: 133px;
+	}
+	.service_button:hover{
+		background: white;
+		color: #a79b9b;
+	}
+	/*Конец стиля для 4 страницы*/
+
+
+
+
+	/*Начало стиля для 5 страницы*/
+	.name_team{
+		font-size: 40px;
+		color: #9a9999;
+		text-align: center;
+		margin-top: 150px;
+	}
+	.team{
+		margin-left: 150px;
+		margin-top: 160px;
+		display: grid;
+		justify-content: center;
+		grid-template-columns: repeat(3, 400px);
+		grid-template-rows: repeat(2, 400px);
+		grid-template-areas: 
+		"vika alena dima"
+		"kseha filipp alina";
+	}
+	.people1{grid-area: vika;}
+	.peopl2{grid-area: alena;}
+	.people3{grid-area: dima;}
+	.people4{grid-area: kseha;}
+	.people5{grid-area: filipp;}
+	.people6{grid-area: alina;}
+	
+	.vika_sqr{
+		background: #a79b9b;
+		width: 300px;
+		height: 300px;
+		
+		
+	}
+	.vika{
+		color: #a79b9b;
+		height: 200px;
+		width: 200px;
+		border-radius: 50%;
+		align-items: center;
+		margin-left: 50px;
+		margin-top: 20px;
+		
+	}
+	.alena{
+		height: 200px;
+		width: 200px;
+		border-radius: 50%;
+		color: #a79b9b;
+		margin-left: 50px;
+		margin-top: 20px;
+		
+	}
+	.dima{
+		height: 200px;
+		width: 200px;
+		border-radius: 50%;
+		color: #a79b9b;
+		margin-left: 50px;
+		margin-top: 20px;
+		
+	}
+	.kseha{
+		height: 200px;
+		width: 200px;
+		border-radius: 50%;
+		color: #a79b9b;
+		margin-left: 50px;
+		margin-top: 20px;
+		
+	}
+	.filipp{
+		height: 200px;
+		width: 200px;
+		border-radius: 50%;
+		color: #a79b9b;
+		margin-left: 50px;
+		margin-top: 20px;
+		
+	}
+	.alina_sqr{
+		background: #a79b9b;
+		width: 300px;
+		height: 300px;
+	}
+	.alina{
+		height: 200px;
+		width: 200px;
+		border-radius: 50%;
+		color: #a79b9b;
+		margin-left: 50px;
+		margin-top: 20px;
+		
+	}
+
+
+
+	.vika_name{
+		font-size: 30px;
+		text-align: center;
+		color: white;
+		margin-bottom: 5px;
+	}
+	.vika_prof{
+		font-size: 17px;
+		text-align: center;
+		color: white;
+	}
+	.alena_name{
+		font-size: 30px;
+		text-align: center;
+		color: #a79b9b;
+		margin-bottom: 5px;
+		margin-right: 90px;
+	}
+	.alena_prof{
+		font-size: 17px;
+		text-align: center;
+		color: #a79b9b;
+		margin-right: 90px;
+	}
+	.dima_name{
+		font-size: 30px;
+		text-align: center;
+		color: #a79b9b;
+		margin-bottom: 5px;
+		margin-right: 90px;
+	}
+	.dima_prof{
+		font-size: 17px;
+		text-align: center;
+		color: #a79b9b;
+		margin-right: 90px;
+	}
+	.kseha_name{
+		font-size: 30px;
+		text-align: center;
+		color: #a79b9b;
+		margin-bottom: 5px;
+		margin-right: 90px;
+	}
+	.kseha_prof{
+		font-size: 17px;
+		text-align: center;
+		color: #a79b9b;
+		margin-right: 90px;
+		
+	}
+	.filipp_name{
+		font-size: 30px;
+		text-align: center;
+		color: #a79b9b;
+		margin-bottom: 5px;
+		margin-right: 90px;
+	}
+	.filipp_prof{
+		font-size: 17px;
+		text-align: center;
+		color: #a79b9b;
+		margin-right: 90px;
+		
+	}
+	.alina_name{
+		font-size: 30px;
+		text-align: center;
+		color: white;
+		margin-bottom: 5px;
+	}
+	.alina_prof{
+		font-size: 17px;
+		text-align: center;
+		color: white;
+
+	}
+	/*Конец стиля для 5 страницы*/
+
+
+
+
+
+
+	/*Начало стиля для 6 страницы*/
+	.rules_wrap{
+		padding-top: 170px;
+	}
+	.rules_title{
+		background-color:#c8c7c7;
+	}
+	.rules_h{
+		font-size: 40px;
+		color: #c08665;
+		text-align: center;
+		padding-top: 50px;
+	}
+	.rules_text1{
+		color: #9a9999;
+		text-align: center;
+		font-size: 25px;
+		padding-top: 50px;
+	}
+	.rules_text2{
+		color: #9a9999;
+	padding-top: 50px;
+	padding-left: 50px;
+	padding-bottom: 150px;
+		font-size: 25px;
+	}
+	/*Конец стиля для 6 страницы*/
+
+	/*Начало стиля для 7 страницы*/
+	.care_wrap{
+		width: 100%;
+		max-height: 140vh;
+	}
+
+	.care_min{
+		height: 940px;
+		width: 750px;
+		
+	}
+	.care_round{
+		height: 400px;
+		width: 400px;
+		background-color: #a79b9b;
+		border-radius: 50%;
+		position: relative;
+		top: -900px;
+		left: 560px;
+		
+	}
+	.care_round:hover{
+		 background: #718290;
+		}
+	
+	.care_white{
+		font-size: 40px;
+		color: white;
+		text-align: center;
+		position: relative;
+		top: -880px;
+		left: -68px;
+	}
+	.care_white2{
+		font-size: 60px;
+		color: white;
+		text-align: center;
+		position: relative;
+		text-transform: uppercase;
+		top: -860px;
+		left: -92px;
+	}
+	.care_black{
+		font-size: 40px;
+		color: #a79b9b;
+		text-align: center;
+		position: relative;
+		top: -1000px;
+		left: 54px;
+	}
+	.care_black2{
+		font-size: 60px;
+		color: #a79b9b;
+		text-align: center;
+		position: relative;
+		text-transform: uppercase;
+		top: -980px;
+		left: 78px;
+	}
+	.care_button{
+		text-align: center;
+		font-size: 15px;
+		border: 0;
+		background-color: #c08665;
+		color:white;
+		border-radius: 16px;
+		cursor: pointer;
+		padding: 5px 45px;
+		position: relative;
+		top: -890px;
+		left: 653px;
+	}
+	.care_button:hover{
+		color: white;
+		background-color: #a79b9b;
+	}
+	/*Конец стиля для 7 страницы*/
+
+
+
+	/*Начало стиля для 8 страницы*/
+	.contact_h{
+		font-size: 40px;
+		color: #a79b9b;
+		text-align: center;
+		padding-bottom: 100px;
+	}
+	.contact{
+		display: grid;
+		grid-template-columns: 50% 50%;
+		justify-content: center;
+	}
+	/*Оболочка для правой стороны*/
+	.contact_icon_container{
+		background-color: #b0afaf;
+		height: 890px;
+	}
+	/*Иконки и текст под ними*/
+	.iconci{
+		display: grid;
+		grid-template-columns: 50% 50%;
+		padding-top: 70px;
+		padding-left: 50px;
+	}
+	.contact_left_name{
+		color: white;
+		font-size: 35px;
+		padding-top: 29px;
+	}
+	/*Текст под иконками*/
+	.contact_text_1{
+		color: white;
+		font-size: 25px;
+		
+		
+	}
+	.contact_text_2{
+		color: white;
+		font-size: 25px;
+		
+	}
+	.contact_text_3{
+		color: white;
+		font-size: 25px;
+		
+	}
+	/*Иконки ширина высота*/
+	.icon1,.contact_icon_2,.contact_icon_3{
+		height: 200px;
+		width: 200px;
+	}
+	.contact_left_h{
+		text-align: center;
+	}
+
+	/*Конец стиля для 8 страницы*/
+	/*Подвал*/
+	#footer{
+		text-align: center;
+		padding: 60px;
+		color: black;
+		width: 100%;
+	}
+	.contact_right_img{
+		height: 890px;
+	
+	}
+	a i{
+		color: #727070;
+		font-size: 70px;
+		margin-top: 90px;
+		margin-left: 10px;
+	}
+	a:hover i{
+		color: white;
+		transition: 1s;
+		transform: scale(1);
+	}
+
+	/*Подвал конец*/
